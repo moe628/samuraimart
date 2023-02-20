@@ -15,6 +15,9 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <!-- Styles -->
+    <link href="{{ asset('css/samuraimart.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -72,7 +75,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 mb-5">
             @yield('content')
         </main>
     </div>
