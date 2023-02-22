@@ -8,10 +8,10 @@
 
             <hr>
             <form method="POST" action="{{ route('login') }}">
-                @csrt
+                @csrf
 
-                <div class="foem-group">
-                    <input id="email" type="email" class="fprm-control @error('email') is-invalid @enderror samuraimart-login-input" name="email" value="{{ old('email') }}" require autocomplete="email" autofocus placeholder="メールアドレス">
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror samuraimart-login-input" name="email" value="{{ old('email') }}" require autocomplete="email" autofocus placeholder="メールアドレス">
 
                     @error('email')
                     <span class="invalid-feedback" role="alert">
@@ -20,7 +20,7 @@
                     @enderror
                 </div>
 
-                <div class="foem-group">
+                <div class="form-group">
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror samuraimart-login-input" name="password" required autocomplete="current-password" placeholder="パスワード">
 
                     @error('password')

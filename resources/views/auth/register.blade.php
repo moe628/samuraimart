@@ -67,11 +67,11 @@
                     <label for="password" class="col-md-5 col-form-label text-md-left">パスワード<span class="ml-1 samuraimart-require-input-label"><span class="samuraimart-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input id="password" type="password" class="form-control @error('passwoed') is-invalid @enderror samuraimart-login-input" name="password" require autocomplete="new-password">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror samuraimart-login-input" name="password" require autocomplete="new-password">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
-                           <strong>{{ $message }}</strong>
+                            <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                     </div>
