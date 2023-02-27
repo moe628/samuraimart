@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReviewController;
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::controller(UserController::class)->group(function () {
     Route::get('users/mypage', 'mypage')->name('mypage');
     Route::get('users/mypage/edit', 'edit')->name('mypage.edit');
     Route::put('users/mypage', 'update')->name('mypage.update');
+    Route::get('user/mypage/password/edit', 'edit_password')->name('mypage.edit_password');
+    Route::put('user/mypage/password', 'update_password')->name('mypage.update_password');
 });
 
 Route::post('reviews', [ReviewController::class, 'store'])->name('reviews.store');
